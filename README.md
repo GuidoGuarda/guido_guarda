@@ -23,8 +23,8 @@ Sou um desenvolvedor **Python** e entusiasta de **Inteligência Artificial**, co
 ## 📊 Estatísticas do GitHub  
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=SeuUsuario&show_icons=true&theme=radical" alt="Estatísticas do GitHub" width="48%"/>  
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SeuUsuario&layout=compact&theme=radical" alt="Linguagens Mais Usadas" width="48%"/>  
+  <img src="https://github-readme-stats.vercel.app/api?username=GuidoGuarda&show_icons=true&theme=radical" alt="Estatísticas do GitHub" width="48%"/>  
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=GuidoGuarda&layout=compact&theme=radical" alt="Linguagens Mais Usadas" width="48%"/>  
 </div>
 
 ---
