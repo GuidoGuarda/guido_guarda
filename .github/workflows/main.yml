@@ -1,0 +1,46 @@
+name: Update README Stats
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * *' # Executa diariamente à meia-noite (UTC)
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Verifica o código do repositório
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Configura a ferramenta para gerar as estatísticas do GitHub
+      - name: Generate GitHub Stats
+        run: |
+          curl -o stats.svg "https://github-readme-stats.vercel.app/api?username=GuidoGuarda&show_icons=true&theme=radical"
+          curl -o langs.svg "https://github-readme-stats.vercel.app/api/top-langs/?username=GuidoGuarda&layout=compact&theme=radical"
+
+      # Atualiza o README com os novos dados
+      - name: Update README
+        run: |
+          sed -i '/<!-- stats start -->/,/<!-- stats end -->/c\
+          <!-- stats start -->\n\
+          ![GitHub Stats](stats.svg)\n\
+          ![Top Languages](langs.svg)\n\
+          <!-- stats end -->' README.md
+
+      # Adiciona e comita as mudanças no repositório
+      - name: Commit changes
+        run: |
+          git config --local user.name "GitHub Actions Bot"
+          git config --local user.email "actions@github.com"
+          git add README.md stats.svg langs.svg
+          git commit -m "Atualização automática do README com estatísticas"
+
+      # Envia as mudanças para o repositório remoto
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
