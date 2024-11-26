@@ -37,7 +37,7 @@ Sou um desenvolvedor **Python** e entusiasta de **Inteligência Artificial**, co
 ---
 
 ## ✨ Um Toque Pessoal  
-Quando não estou programando, adoro explorar trilhas ao ar livre, aprender novas tecnologias e testar receitas na cozinha!
+Quando não estou programando, adoro explorar inovações e sustentabilidade, aprender novas tecnologias e treinamento físico!
 
 ---
 
